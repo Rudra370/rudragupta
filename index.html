@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudra Narayan Gupta</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Rudra Narayan Gupta</h1>
+    </header>
+    <main>
+        <div>
+            <img src="me.png" alt="Rudra Narayan Gupta" class="profile-image">
+            <p class="description">
+                Working as Head of Engineering at
+                <a href="https://www.growmeorganic.com/" target="_blank" class="gmo">
+                    GrowMeOrganic
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjZjU1NTI4IiBkPSJNMTQuMjEgMS41SDEwdjEuMjVoMy4wOEw3LjkgNy4yMWwuODIgMWw1LjUzLTQuNzdWN2gxLjI1VjIuNzlhMS4yOSAxLjI5IDAgMCAwLTEuMjktMS4yOSIvPjxwYXRoIGZpbGw9IiNmNTU1MjgiIGQ9Ik0xMi4yNSAxMy4yNUgxLjc1di04LjVINy41VjMuNWgtNmExIDEgMCAwIDAtMSAxdjlhMSAxIDAgMCAwIDEgMWgxMWExIDEgMCAwIDAgMS0xdi00aC0xLjI1eiIvPjwvc3ZnPg=="
+                        alt="external link" />
+                </a>. Few things which catches my eyes in tech are LLD, HLD, DX, CI/CD, Managing Infra, Open Source,
+                Self Hosting etc.
+            </p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/rudra-gupta-6381951a0/" target="_blank" class="social-link">
+                    <img src="https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/rudra370" target="_blank" class="social-link">
+                    <img src="https://github.githubassets.com/favicons/favicon-dark.svg" alt="GitHub">
+                </a>
+                <a href="https://x.com/rudragupta9506" target="_blank" class="social-link">
+                    <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="Twitter">
+                </a>
+                <a href="https://stackoverflow.com/users/13443334/" target="_blank" class="social-link">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196"
+                        alt="StackOverflow">
+                </a>
+            </div>
+        </div>
+        <div id="qr"></div>
+    </main>
+    <script>
+        new QRCode(
+            "qr",
+            {
+                text: window.location.href,
+                width: 250,
+                height: 250,
+            }
+        );
+    </script>
+</body>
+
+</html>
