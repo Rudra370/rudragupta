@@ -1,5 +1,7 @@
 :root {
   --orange: #f55528;
+  --image: 250px;
+  --icon: 30px;
 }
 
 * {
@@ -9,6 +11,7 @@
   text-decoration: none;
   font-family: Poppins, sans-serif;
   color: #f5f5f5;
+  text-align: center;
 }
 
 html,
@@ -54,9 +57,8 @@ main > div {
 }
 
 .profile-image {
-  --dimension: 250px;
-  width: var(--dimension);
-  height: var(--dimension);
+  width: var(--image);
+  height: var(--image);
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #f5f5f5; /* White border around the circle */
@@ -66,7 +68,6 @@ main > div {
 .description {
   color: #c1c3c8;
   font-weight: 500;
-  text-align: center;
   padding: 0 5%;
 }
 
@@ -86,14 +87,49 @@ main > div {
 }
 
 .socials img {
-  --dimension: 30px;
-  width: var(--dimension);
-  height: var(--dimension);
+  width: var(--icon);
+  height: var(--icon);
 }
 
 #qr img {
   border: 5px solid #f0f0f0;
   border-radius: 10px;
-  /* add shadow */
   box-shadow: 0 0 200px #a7a7a733;
+}
+
+@media (max-width: 950px) {
+  body {
+    padding: 3% 4%;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --image: 200px;
+    --icon: 25px;
+  }
+
+  html {
+    height: auto;
+  }
+
+  body {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  main {
+    height: 100%;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 10px;
+  }
+
+  main > :first-child {
+    gap: 10px;
+  }
+
+  #qr {
+    transform: scale(0.8);
+  }
 }
