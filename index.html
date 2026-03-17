@@ -6,45 +6,319 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rudra Narayan Gupta</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
 </head>
 
 <body>
-    <header>
-        <h1>Rudra Narayan Gupta</h1>
-    </header>
-    <main>
-        <div>
-            <img src="https://avatars.githubusercontent.com/u/69134291?v=4" alt="Rudra Narayan Gupta"
-                class="profile-image">
-            <p class="description">
-                Founder & CTO at
-                <a href="https://www.growthtoolkit.io/" target="_blank">
-                    GrowthToolkit
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjZjU1NTI4IiBkPSJNMTQuMjEgMS41SDEwdjEuMjVoMy4wOEw3LjkgNy4yMWwuODIgMWw1LjUzLTQuNzdWN2gxLjI1VjIuNzlhMS4yOSAxLjI5IDAgMCAwLTEuMjktMS4yOSIvPjxwYXRoIGZpbGw9IiNmNTU1MjgiIGQ9Ik0xMi4yNSAxMy4yNUgxLjc1di04LjVINy41VjMuNWgtNmExIDEgMCAwIDAtMSAxdjlhMSAxIDAgMCAwIDEgMWgxMWExIDEgMCAwIDAgMS0xdi00aC0xLjI1eiIvPjwvc3ZnPg=="
-                        alt="external link" />
-                </a>. Few things which catches my eyes in tech are LLD, HLD, DX, CI/CD, Managing Infra, Open Source,
-                Self Hosting etc.
-            </p>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/rudra-gupta-6381951a0/" target="_blank" class="social-link">
-                    <img src="https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/rudra370" target="_blank" class="social-link">
-                    <img src="https://github.githubassets.com/favicons/favicon-dark.svg" alt="GitHub">
-                </a>
-                <a href="https://x.com/rudragupta9506" target="_blank" class="social-link">
-                    <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="Twitter">
-                </a>
-                <a href="https://stackoverflow.com/users/13443334/" target="_blank" class="social-link">
-                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196"
-                        alt="StackOverflow">
-                </a>
+
+    <nav>
+        <a href="#" class="nav-logo">RG</a>
+        <div class="nav-links">
+            <a href="#contact">Contact</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name">Rudra Narayan Gupta</h1>
+                <p class="hero-title">Co-Founder & CTO <span class="accent">@</span> <a
+                        href="https://www.growthtoolkit.io/" target="_blank" class="hero-company">GrowthToolKit.io</a>
+                </p>
+                <p class="hero-bio">Engineering excites me the most. Love to see how my code makes people's and dev's
+                    life easier.</p>
+                <div class="hero-tags">
+                    <span>LLD</span>
+                    <span>HLD</span>
+                    <span>DX</span>
+                    <span>CI/CD</span>
+                    <span>Infra</span>
+                    <span>Open Source</span>
+                    <span>Self Hosting</span>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/rudra370" target="_blank" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rudra-gupta-6381951a0/" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://x.com/rudragupta9506" target="_blank" aria-label="X / Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://stackoverflow.com/users/13443334/" target="_blank" aria-label="StackOverflow">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M15.725 0l-1.72 1.277 6.39 8.588 1.72-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.905-1.94-9.702-4.517zm-1.85 4.86l-.44 2.093 10.473 2.201.44-2.092-10.473-2.203zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://avatars.githubusercontent.com/u/69134291" alt="Rudra Narayan Gupta">
             </div>
         </div>
-        <div id="qr"></div>
-    </main>
-    <script>new QRCode("qr", { text: window.location.href, width: 250, height: 250 });</script>
+    </section>
+
+    <section class="experience" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Co-Founder & CTO</h3>
+                            <a href="https://www.growthtoolkit.io/" target="_blank"
+                                class="company-link">GrowthToolKit.io</a>
+                        </div>
+                        <span class="timeline-date">Jun 2025 &mdash; Present</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Co-Founder & CTO</h3>
+                            <a href="https://www.growmeorganic.com/" target="_blank"
+                                class="company-link">GrowMeOrganic</a>
+                        </div>
+                        <span class="timeline-date">Feb 2023 &mdash; Present</span>
+                    </div>
+                    <p class="timeline-location">Bengaluru, India</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Founding Member (Tech)</h3>
+                            <a href="https://www.linkedin.com/company/79847897/" target="_blank"
+                                class="company-link">SayF</a>
+                        </div>
+                        <span class="timeline-date">Mar 2022 &mdash; Jan 2023</span>
+                    </div>
+                    <p class="timeline-location">Bengaluru, India</p>
+                    <ul class="timeline-details">
+                        <li>Led team to revamp the product app (Flutter) from scratch in a month</li>
+                        <li>Grew application from 500 to 50,000 users in 6 months</li>
+                        <li>Rewrote entire backend (Django), reduced API response time by 60-70%</li>
+                        <li>Redesigned PostgreSQL architecture, reduced data redundancy by 50%</li>
+                        <li>Built payment flows, Docker integration, B2B architecture</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span>Django</span>
+                        <span>PostgreSQL</span>
+                        <span>Flutter</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-title">Work</h2>
+        <div class="projects-grid">
+            <a href="https://github.com/Rudra370/s3manager" target="_blank" class="project-card">
+                <div class="project-card-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
+                    </svg>
+                    <div class="project-stars">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14">
+                            <path
+                                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 19.771l-7.416 3.642 1.48-8.279L0 9.306l8.332-1.151z" />
+                        </svg>
+                        3
+                    </div>
+                </div>
+                <h3>s3manager</h3>
+                <p>A beautiful, self-hosted web interface for managing your S3-compatible storage.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                </div>
+            </a>
+            <a href="https://github.com/Rudra370/easyWidgets" target="_blank" class="project-card">
+                <div class="project-card-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
+                    </svg>
+                    <div class="project-stars">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14">
+                            <path
+                                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 19.771l-7.416 3.642 1.48-8.279L0 9.306l8.332-1.151z" />
+                        </svg>
+                        4
+                    </div>
+                </div>
+                <h3>easyWidgets</h3>
+                <p>A collection of easy-to-use Flutter widgets for rapid app development.</p>
+                <div class="project-tech">
+                    <span>Dart</span>
+                    <span>Flutter</span>
+                </div>
+            </a>
+            <a href="https://github.com/Rudra370/ai-completer" target="_blank" class="project-card">
+                <div class="project-card-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
+                    </svg>
+                    <div class="project-stars">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14">
+                            <path
+                                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 19.771l-7.416 3.642 1.48-8.279L0 9.306l8.332-1.151z" />
+                        </svg>
+                        1
+                    </div>
+                </div>
+                <h3>ai-completer</h3>
+                <p>AI-powered autocomplete tool for enhanced developer productivity.</p>
+                <div class="project-tech">
+                    <span>TypeScript</span>
+                </div>
+            </a>
+            <a href="https://github.com/Rudra370/lazy_csv_viewer" target="_blank" class="project-card">
+                <div class="project-card-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
+                    </svg>
+                    <div class="project-stars">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14">
+                            <path
+                                d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 19.771l-7.416 3.642 1.48-8.279L0 9.306l8.332-1.151z" />
+                        </svg>
+                        0
+                    </div>
+                </div>
+                <h3>lazy_csv_viewer</h3>
+                <p>A lightweight CSV viewer that loads large files page by page with low resource consumption.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="section-title">Skills & Tech</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skill-tags">
+                    <span>Python</span>
+                    <span>Dart</span>
+                    <span>TypeScript</span>
+                    <span>JavaScript</span>
+                    <span>Java</span>
+                    <span>Shell</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks</h3>
+                <div class="skill-tags">
+                    <span>Django</span>
+                    <span>Flutter</span>
+                    <span>Spring Boot</span>
+                    <span>React</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Infrastructure</h3>
+                <div class="skill-tags">
+                    <span>AWS</span>
+                    <span>Docker</span>
+                    <span>PostgreSQL</span>
+                    <span>CI/CD</span>
+                    <span>S3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-card">
+            <h3>Bachelor of Technology &mdash; Computer Science</h3>
+            <p>Dr. A.P.J. Abdul Kalam Technical University</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <p class="footer-cta">Let's connect</p>
+            <div class="footer-links">
+                <a href="https://github.com/rudra370" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/rudra-gupta-6381951a0/" target="_blank">LinkedIn</a>
+                <a href="https://x.com/rudragupta9506" target="_blank">X</a>
+                <a href="https://stackoverflow.com/users/13443334/" target="_blank">StackOverflow</a>
+            </div>
+            <p class="footer-copy">Rudra Narayan Gupta</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var toggle = document.getElementById('theme-toggle');
+            var html = document.documentElement;
+
+            function getTheme() {
+                return html.getAttribute('data-theme') ||
+                    (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            }
+
+            toggle.addEventListener('click', function () {
+                html.classList.add('theme-transitioning');
+                var next = getTheme() === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                setTimeout(function () {
+                    html.classList.remove('theme-transitioning');
+                }, 600);
+            });
+        })();
+    </script>
 </body>
 
 </html>
